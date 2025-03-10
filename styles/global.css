@@ -33,3 +33,37 @@ body {
 
   background-color: var(--background-primary);
 }
+
+header {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-brand);
+  font: var(--text-sm);
+
+  &:hover {
+    color: var(--color-brand-hover);
+  }
+}
+
+h1 {
+  font: var(--text-lg);
+  color: var(--content-primary);
+}
+
+.container {
+  max-width: 85.375rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding-top: 1.625rem;
+    display: flex;
+    justify-content: center;
+  }
+}
