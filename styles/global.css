@@ -53,6 +53,11 @@ h1 {
   color: var(--content-primary);
 }
 
+input,
+button {
+  all: unset;
+}
+
 .container {
   max-width: 85.375rem;
   width: 100%;
