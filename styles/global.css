@@ -30,6 +30,7 @@ body {
   --moz-osx-font-smoothing: grayscale;
 
   font: var(--text-base);
+  color: var(--content-secondary);
 
   background-color: var(--background-primary);
 }
@@ -53,9 +54,26 @@ h1 {
   color: var(--content-primary);
 }
 
-input,
+input {
+  outline: none;
+  font: var(--text-base);
+  font-weight: 400;
+
+  &::placeholder {
+    color: var(--content-tertiary);
+  }
+}
+
 button {
-  all: unset;
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style-type: none;
 }
 
 .container {
