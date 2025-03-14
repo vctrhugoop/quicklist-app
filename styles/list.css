@@ -1,6 +1,10 @@
 .list {
   margin-top: 2.5rem;
 
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
   & .items {
     display: flex;
     align-items: center;
@@ -13,6 +17,11 @@
 
     span {
       width: 100%;
+    }
+
+    &:has(input:checked) span {
+      color: var(--content-tertiary);
+      text-decoration: line-through;
     }
   }
 
