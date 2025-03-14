@@ -72,7 +72,7 @@ form.addEventListener('submit', e => {
             <input type="checkbox" name="ok" id="ok" />
           </div>
           <span>${inputValue}</span>
-          <button>
+          <button class="remove">
             <img src="./assets/icons/trash.svg" alt="" />
           </button>
         </li>`
@@ -81,3 +81,11 @@ form.addEventListener('submit', e => {
 
   input.value = '';
 })
+
+
+ul.addEventListener('click', e => {
+  if (e.target.closest('.remove')) {
+    const item = e.target.closest('li');
+    item.remove();
+  }
+});
