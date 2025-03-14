@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const ul = document.querySelector('ul');
+const toast = document.getElementById('toast');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -80,6 +81,7 @@ form.addEventListener('submit', e => {
   ul.insertAdjacentHTML('beforeend', novaLi);
 
   input.value = '';
+
 })
 
 
@@ -87,5 +89,15 @@ ul.addEventListener('click', e => {
   if (e.target.closest('.remove')) {
     const item = e.target.closest('li');
     item.remove();
+
   }
+  toastMessage()
 });
+
+function toastMessage() {
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}

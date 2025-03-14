@@ -1,0 +1,19 @@
+#toast {
+  border-radius: 12px;
+  background: var(--color-danger);
+
+  padding: 0.75rem;
+  display: none;
+  margin-top: 2.25rem;
+
+  & span {
+    width: 100%;
+    color: var(--content-always-white);
+  }
+}
+
+#toast.show {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
