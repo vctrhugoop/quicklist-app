@@ -89,9 +89,8 @@ ul.addEventListener('click', e => {
   if (e.target.closest('.remove')) {
     const item = e.target.closest('li');
     item.remove();
-
+    toastMessage()
   }
-  toastMessage()
 });
 
 function toastMessage() {
