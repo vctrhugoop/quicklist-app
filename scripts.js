@@ -93,10 +93,17 @@ ul.addEventListener('click', e => {
   }
 });
 
+toast.addEventListener('click', e => {
+  if (e.target.closest('.remove')) {
+    toast.classList.remove('show');
+  }
+});
+
+
 function toastMessage() {
   toast.classList.add('show');
 
   setTimeout(() => {
     toast.classList.remove('show');
-  }, 3000);
+  }, 5000);
 }
